@@ -1,3 +1,30 @@
+<?php
+session_start();
+include 'servidor.php'; // Inclui a conexão com o banco de dados
+
+$mensagem = ''; // Variável para exibir mensagem de sucesso ou erro
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Captura os dados do formulário
+    $titulo = $_POST['nomeVaga'];
+    $descricao = $_POST['descricao'];
+    $requisitos = $_POST['requisitos'];
+    $beneficios = $_POST['beneficios'];
+    $localizacao = $_POST['localizacao'];
+    $cnpj = $_SESSION['cnpj']; // Obtém o CNPJ da sessão, definido no login
+
+    // Insere os dados no banco de dados
+    try {
+        $sql = "INSERT INTO post (titulo, descricao, requisitos, beneficios, localizacao, cnpj_empresa)
+                VALUES ('$titulo', '$descricao', '$requisitos', '$beneficios', '$localizacao', '$cnpj')";
+        $conn->query($sql);
+        $mensagem = "Vaga publicada com sucesso!";
+    } catch (mysqli_sql_exception $e) {
+        $mensagem = "Erro ao publicar vaga: " . $e->getMessage();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,30 +59,34 @@
           <div class="col-md-8">
             <div class="card p-4 shadow-sm">
               <h2 class="card-title text-center mb-4 text-primary">Postar Vaga</h2>
-              <form class="row g-3">
+
+              <!-- Exibe a mensagem de sucesso ou erro -->
+              <?php if ($mensagem): ?>
+                <div class="alert alert-info" role="alert">
+                  <?php echo $mensagem; ?>
+                </div>
+              <?php endif; ?>
+
+              <form class="row g-3" method="POST">
                 <div class="col-md-12">
                   <label for="nomeVaga" class="form-label">Título da Vaga</label>
-                  <input type="text" class="form-control" id="nomeVaga" required>
+                  <input type="text" class="form-control" id="nomeVaga" name="nomeVaga" required>
                 </div>
                 <div class="col-md-12">
                   <label for="descricao" class="form-label">Descrição da Vaga</label>
-                  <textarea class="form-control" id="descricao" rows="4" required></textarea>
+                  <textarea class="form-control" id="descricao" name="descricao" rows="4" required></textarea>
                 </div>
                 <div class="col-md-12">
                   <label for="requisitos" class="form-label">Requisitos</label>
-                  <textarea class="form-control" id="requisitos" rows="4" required></textarea>
+                  <textarea class="form-control" id="requisitos" name="requisitos" rows="4" required></textarea>
                 </div>
                 <div class="col-md-12">
                   <label for="beneficios" class="form-label">Benefícios</label>
-                  <textarea class="form-control" id="beneficios" rows="4" required></textarea>
+                  <textarea class="form-control" id="beneficios" name="beneficios" rows="4" required></textarea>
                 </div>
                 <div class="col-md-6">
                   <label for="localizacao" class="form-label">Localização</label>
-                  <input type="text" class="form-control" id="localizacao" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="salario" class="form-label">Salário</label>
-                  <input type="text" class="form-control" id="salario" required>
+                  <input type="text" class="form-control" id="localizacao" name="localizacao" required>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary w-100">Publicar Vaga</button>
@@ -65,4 +96,5 @@
           </div>
         </div>
       </div>
-      
+</body>
+</html>
