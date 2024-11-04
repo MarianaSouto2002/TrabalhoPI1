@@ -18,10 +18,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="feed.html">Feed</a>
+                        <a class="nav-link text-white" href="index.php">Feed</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="postEmpresa.html">Postar Vaga</a>
+                        <a class="nav-link text-white" href="postEmpresa.php">Postar Vaga</a>
                     </li>
                 </ul>
             </div>
