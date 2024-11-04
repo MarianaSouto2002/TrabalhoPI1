@@ -25,8 +25,14 @@ strap.bundle.min.js"></script>
           <li class="nav-item">
             <a class="nav-link  text-white" aria-current="page" href="index.php">Feed</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link  text-white" href="login.php">Login</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Login
+            </a>
+            <ul class="dropdown-menu text-white">
+              <li><a class="dropdown-item" href="loginEmpresa.php">entrar como empresa</a></li>
+              <li><a class="dropdown-item" href="loginCandidato.php">entrar como candidato</a></li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -36,6 +42,7 @@ strap.bundle.min.js"></script>
               <li><a class="dropdown-item" href="cadastroUsuario.php">Cadastro Usuário</a></li>
               <li><a class="dropdown-item" href="cadEmpresa.php">Cadastro Empresa</a></li>
             </ul>
+          </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
@@ -53,12 +60,12 @@ strap.bundle.min.js"></script>
     }
   </style>
 
-<div class="container-fluid p-0">
-  <div class="card border-0">
-    <img src="imagem_logo.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
+  <div class="container-fluid p-0">
+    <div class="card border-0">
+      <img src="imagem_logo.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
 
+    </div>
   </div>
-</div>
 
   <h2 class="text-center mb-3 mt-0">Vagas recentes:</h2>
   <div class="container row mx-auto g-4">
@@ -76,7 +83,7 @@ strap.bundle.min.js"></script>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 2 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -91,7 +98,7 @@ strap.bundle.min.js"></script>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 3 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -102,11 +109,11 @@ strap.bundle.min.js"></script>
           </div>
           <div class="card-footer text-center">
             <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
-        </div>
+          </div>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 4 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -117,11 +124,11 @@ strap.bundle.min.js"></script>
           </div>
           <div class="card-footer text-center">
             <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
-        </div>
+          </div>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 5 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -136,7 +143,7 @@ strap.bundle.min.js"></script>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 6 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -151,7 +158,7 @@ strap.bundle.min.js"></script>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 7 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -166,7 +173,7 @@ strap.bundle.min.js"></script>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 8 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -181,7 +188,7 @@ strap.bundle.min.js"></script>
         </div>
       </div>
     </div>
-  
+
     <!-- Card 9 -->
     <div class="col-6 col-md-4 col-xxl-2">
       <div>
@@ -199,13 +206,13 @@ strap.bundle.min.js"></script>
 
     <div class="card-body text-center">
       <h5 class="card-title">Quem somos nós?</h5>
-      <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção. 
+      <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
         Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
       </p>
     </div>
-  
+
   </div>
- 
+
 
   <footer class="text-center bg-dark text-white">
     <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto ficticio sem fins

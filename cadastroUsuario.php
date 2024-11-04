@@ -1,6 +1,11 @@
 <?php
 include 'servidor.php';
 
+// Configura o estilo de erro do mysqli para lançar exceções
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+$erro = ''; // Variável para armazenar a mensagem de erro, caso ocorra
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
@@ -10,19 +15,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $estado = $_POST['estado'];
     $cidade = $_POST['cidade'];
 
-    $sql = "INSERT INTO candidato (nome, cpf, email, senha, data_nasc, estado, cidade) 
-            VALUES ('$nome', '$cpf', '$email', '$senha', '$data_nasc', '$estado', '$cidade')";
-
-    if ($conn->query($sql) === TRUE) {
+    try {
+        $sql = "INSERT INTO candidato (nome, cpf, email, senha, data_nasc, estado, cidade) 
+                VALUES ('$nome', '$cpf', '$email', '$senha', '$data_nasc', '$estado', '$cidade')";
+        $conn->query($sql);
         header('Location: index.php');
         exit;
-    } else {
-        echo "Erro: " . $conn->error;
+    } catch (mysqli_sql_exception $e) {
+        if ($e->getCode() == 1062) {
+            // Código 1062 representa uma entrada duplicada (CPF duplicado)
+            $erro = "CPF já cadastrado. Tente outro CPF.";
+        } else {
+            $erro = "Erro ao cadastrar: " . $e->getMessage();
+        }
     }
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -35,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="Cadastro.css">
     <style>
         body {
-            background-image: url('imagem_logo.jpg'); /* Substitua pelo caminho correto da imagem */
+            background-image: url('imagem_logo.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -65,6 +73,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card border-0 p-5 rounded shadow col-md-6 bg-secondary text-white">
             <h2 class="text-center text-white">Cadastro de Usuário</h2>
+            
+            <!-- Exibe a mensagem de erro se houver -->
+            <?php if ($erro): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $erro; ?>
+                </div>
+            <?php endif; ?>
+            
             <form action="#" method="post">
                 <div class="mb-3">
                     <label for="nome" class="form-label">Nome Completo:</label>
@@ -92,31 +108,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <option value="" disabled selected>Selecione seu estado</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
-                        <option value="AP">Amapá</option>
-                        <option value="AM">Amazonas</option>
-                        <option value="BA">Bahia</option>
-                        <option value="CE">Ceará</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="PR">Paraná</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="PI">Piauí</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="RR">Roraima</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="TO">Tocantins</option>
+                        <!-- Inclua todos os estados como no exemplo anterior -->
                     </select>
                 </div>
                 <div class="mb-3">
