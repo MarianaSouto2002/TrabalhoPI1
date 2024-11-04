@@ -1,3 +1,29 @@
+<?php
+include 'servidor.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $data_nasc = $_POST['data_nascimento'];
+    $estado = $_POST['estado'];
+    $cidade = $_POST['cidade'];
+
+    $sql = "INSERT INTO candidato (nome, cpf, email, senha, data_nasc, estado, cidade) 
+            VALUES ('$nome', '$cpf', '$email', '$senha', '$data_nasc', '$estado', '$cidade')";
+
+    if ($conn->query($sql) === TRUE) {
+        header('Location: index.php');
+        exit;
+    } else {
+        echo "Erro: " . $conn->error;
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -46,7 +72,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="cpf" class="form-label">CPF:</label>
-                    <input type="number" id="cpf" name="cpf" class="form-control" required>
+                    <input type="text" id="cpf" name="cpf" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email:</label>
@@ -58,7 +84,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="data-nascimento" class="form-label">Data de Nascimento:</label>
-                    <input type="date" id="data-nascimento" name="data-nascimento" class="form-control" required>
+                    <input type="date" id="data-nascimento" name="data_nascimento" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="estado" class="form-label">Estado:</label>
