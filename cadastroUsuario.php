@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="Cadastro.css">
     <style>
         body {
-            background-image: url('imagem_logo.jpg');
+            background-image: url('SOS_EMPRESO_Banner.jpg');
             background-size: cover;
             background-position: center;
         }

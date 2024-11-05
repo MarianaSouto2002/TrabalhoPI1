@@ -53,7 +53,7 @@ $result = $conn->query($sql);
   </nav>
   <div class="container-fluid p-0">
     <div class="card border-0">
-      <img src="imagem_logo.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
+      <img src="SOS_EMPRESO_Banner.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
 
     </div>
   </div>

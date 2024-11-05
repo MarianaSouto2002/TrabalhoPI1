@@ -44,10 +44,6 @@ strap.bundle.min.js"></script>
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
-          <button class="btn btn-outline-light rounded-0" type="submit">Pesquisar</button>
-        </form>
       </div>
     </div>
   </nav>
@@ -62,7 +58,7 @@ strap.bundle.min.js"></script>
 
   <div class="container-fluid p-0">
     <div class="card border-0">
-      <img src="imagem_logo.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
+      <img src="SOS_EMPRESO_Banner.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
 
     </div>
   </div>
