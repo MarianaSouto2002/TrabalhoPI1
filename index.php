@@ -44,10 +44,6 @@ strap.bundle.min.js"></script>
             </ul>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
-          <button class="btn btn-outline-light rounded-0" type="submit">Pesquisar</button>
-        </form>
       </div>
     </div>
   </nav>
