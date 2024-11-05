@@ -34,6 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     </style>
 </head>
+
 <body class="bg-light">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <div class="container-fluid">
@@ -73,14 +75,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="card border-0 p-5 rounded shadow col-md-6 bg-secondary text-white">
             <h2 class="text-center text-white">Cadastro de Usuário</h2>
-            
+
             <!-- Exibe a mensagem de erro se houver -->
             <?php if ($erro): ?>
                 <div class="alert alert-danger" role="alert">
                     <?php echo $erro; ?>
                 </div>
             <?php endif; ?>
-            
+
             <form action="#" method="post">
                 <div class="mb-3">
                     <label for="nome" class="form-label">Nome Completo:</label>
@@ -108,8 +110,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <option value="" disabled selected>Selecione seu estado</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
-                        <!-- Inclua todos os estados como no exemplo anterior -->
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
                     </select>
+
                 </div>
                 <div class="mb-3">
                     <label for="cidade" class="form-label">Cidade:</label>
@@ -120,4 +147,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 </body>
+
 </html>

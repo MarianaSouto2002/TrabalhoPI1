@@ -1,3 +1,35 @@
+<?php
+session_start();
+include 'servidor.php'; // Inclui a conexão com o banco de dados
+
+// Inicializa a variável de erro
+$erro = "";
+
+// Verifica se o formulário foi enviado
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $cpf = $_POST['cpf']; // Usando CPF
+    $senha = $_POST['password'];
+
+    // Consulta SQL para verificar o CPF e a senha
+    $sql = "SELECT * FROM candidato WHERE cpf = ? AND senha = ?"; // Supondo que a tabela se chame 'candidatos'
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $cpf, $senha); // Usa prepared statements para segurança
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Verifica se encontrou um registro
+    if ($result->num_rows > 0) {
+        // Login bem-sucedido, redireciona para a página do candidato
+        $_SESSION['cpf'] = $cpf; // Armazena o CPF na sessão, se necessário
+        header("Location: dashboardCandidato.php"); // Redireciona para a página do candidato
+        exit();
+    } else {
+        // Login falhou, define uma mensagem de erro
+        $erro = "CPF ou senha incorretos!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,13 +63,21 @@
     </div>
   </nav>
   <div class="card border-0" style="background-image: url('imagem_logo.jpg'); background-size: cover; background-position: 30% 30%; height: 740px;">
-    <div class="container d-flex justify-content-center align-items-center min-vh-100 ">
-      <div class="login-container p-5 rounded shadow col-md-6 ou col-lg-5 bg-dark text-white">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <div class="login-container p-5 rounded shadow col-md-6 col-lg-5 bg-dark text-white">
         <h1 class="text-center">Login</h1>
-        <form action="#" method="POST">
+        
+        <!-- Exibe a mensagem de erro, se existir -->
+        <?php if (!empty($erro)): ?>
+          <div class="alert alert-danger" role="alert">
+            <?php echo $erro; ?>
+          </div>
+        <?php endif; ?>
+        
+        <form action="" method="POST">
           <div class="mb-3">
-            <label for="username" class="form-label">Usuário:</label>
-            <input type="text" id="username" name="username" class="form-control" required>
+            <label for="cpf" class="form-label">CPF:</label>
+            <input type="text" id="cpf" name="cpf" class="form-control" required>
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Senha:</label>
@@ -51,7 +91,5 @@
       </div>
     </div>
   </div>
-
 </body>
-
 </html>
