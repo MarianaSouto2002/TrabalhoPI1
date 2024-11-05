@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </div>
   </nav>
-  <div class="card border-0" style="background-image: url('imagem_logo.jpg'); background-size: cover; background-position: 30% 30%; height: 740px;">
+  <div class="card border-0" style="background-image: url('SOS_EMPRESO_Banner.jpg'); background-size: cover; background-position: 30% 30%; height: 740px;">
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
       <div class="login-container p-5 rounded shadow col-md-6 ou col-lg-5 bg-dark text-white">
         <h1 class="text-center">Login</h1>
