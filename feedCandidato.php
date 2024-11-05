@@ -66,16 +66,17 @@ strap.bundle.min.js"></script>
     </div>
     
     <div class="card-body text-center">
-      <h5 class="card-title">Quem somos nós?</h5>
-      <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
-        Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
-      </p>
+     
     </div>
 
   </div>
 
 
   <footer class="text-center bg-dark text-white">
+  <h5 class="card-title">Quem somos nós?</h5>
+      <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
+        Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
+      </p>
     <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto ficticio sem fins
       comerciais.</p>
   </footer>
