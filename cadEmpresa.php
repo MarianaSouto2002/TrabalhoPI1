@@ -105,13 +105,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <input type="text" class="form-control" id="beneficios" name="beneficios">
             </div>
             <div class="col-md-4">
-              <label for="cidade" class="form-label">Cidade</label>
-              <input type="text" class="form-control" id="cidade" name="cidade" required>
-            </div>
-            <div class="col-md-2">
-              <label for="telefone" class="form-label">Telefone para contato</label>
-              <input type="text" class="form-control" id="telefone" name="telefone">
-            </div>
+            <label for="cidade" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="cidade" name="cidade" required>
+          </div>
+          <div class="col-md-4">
+            <label for="telefone" class="form-label">Telefone para contato</label>
+            <input type="text" class="form-control" id="telefone" name="telefone">
+          </div>
             <div class="col-12">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -120,8 +120,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </label>
               </div>
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary w-100">Cadastrar Empresa</button>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary w-50">Cadastrar Empresa</button>
             </div>
           </form>
         </div>
