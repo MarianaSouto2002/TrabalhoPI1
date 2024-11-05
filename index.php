@@ -30,8 +30,8 @@ strap.bundle.min.js"></script>
               Login
             </a>
             <ul class="dropdown-menu text-white">
-              <li><a class="dropdown-item" href="loginEmpresa.php">entrar como empresa</a></li>
-              <li><a class="dropdown-item" href="loginCandidato.php">entrar como candidato</a></li>
+              <li><a class="dropdown-item" href="loginEmpresa.php">Empresa</a></li>
+              <li><a class="dropdown-item" href="loginCandidato.php">Candidato</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
