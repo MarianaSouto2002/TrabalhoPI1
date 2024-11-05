@@ -74,8 +74,8 @@ strap.bundle.min.js"></script>
             <p class="text-center">São Paulo, SP</p>
           </div>
           <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #00509e; border-color: #00509e;">Ver vaga</a>
-          </div>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
+        </div>
         </div>
       </div>
     </div>
