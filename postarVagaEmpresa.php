@@ -24,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -47,16 +46,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link text-white" href="index.php">Feed</a>
+            <a class="nav-link text-white" href="feedEmpresa.php">Feed</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Vagas
-            </a>
-            <ul class="dropdown-menu text-white"> 
-              <li><a class="dropdown-item" href="loginEmpresa.php">Postar</a></li>
-              <li><a class="dropdown-item" href="loginCandidato.php">Vagas Postadas</a></li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="postarVagaEmpresa.php">Postar vaga</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Sair.php">Sair</a>
           </li>
         </ul>
       </div>

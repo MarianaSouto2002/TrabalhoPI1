@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result->num_rows > 0) {
         // Login bem-sucedido, redireciona para postEmpresa.php
         $_SESSION['cnpj'] = $cnpj; // Armazena o CNPJ na sessão, se necessário
-        header("Location: postarVagaEmpresa.php");
+        header("Location: feedEmpresa.php");
         exit();
     } else {
         // Login falhou, define uma mensagem de erro
