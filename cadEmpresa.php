@@ -57,9 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <li class="nav-item">
             <a class="nav-link text-white" aria-current="page" href="index.php">Feed</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="login.php">Login</a>
-          </li>
         </ul>
       </div>
     </div>
