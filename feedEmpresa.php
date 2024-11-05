@@ -38,6 +38,20 @@ strap.bundle.min.js"></script>
   <h2 class="text-center mb-3 mt-0">Suas vagas:</h2>
   <div class="container row mx-auto g-4">
 
+    <!-- Card 9 -->
+    <div class="col-6 col-md-4 col-xxl-2">
+      <div>
+        <div class="card">
+          <div class="card-body">
+            <p class="text-center">Analista Financeiro - Empresa VWX</p>
+            <p class="text-center">Florianópolis, SC</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="card-body text-center">
       <h5 class="card-title">Quem somos nós?</h5>
