@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card p-4 shadow-sm">
-          <h2 class="card-title text-center mb-4 text-primary">Postar Vaga</h2>
+        <h2 class="card-title text-center mb-4" style="color: #002f6c;">Postar Vaga</h2>
 
           <!-- Exibe a mensagem de sucesso ou erro -->
           <?php if ($mensagem): ?>
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <input type="text" class="form-control" id="localizacao" name="localizacao" required>
             </div>
             <div class="col-12">
-              <button type="submit" class="btn btn-primary w-100">Publicar Vaga</button>
+              <button type="submit" class="btn background-color: #002f6c w-50">Publicar Vaga</button>
             </div>
           </form>
         </div>
