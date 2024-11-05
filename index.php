@@ -89,7 +89,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Rio de Janeiro, RJ</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Curitiba, PR</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Porto Alegre, RS</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Belo Horizonte, MG</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
@@ -149,7 +149,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Recife, PE</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
@@ -164,7 +164,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Brasília, DF</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
@@ -179,7 +179,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Salvador, BA</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@ strap.bundle.min.js"></script>
             <p class="text-center">Florianópolis, SC</p>
           </div>
           <div class="card-footer text-center">
-            <a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>
+          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
           </div>
         </div>
       </div>
