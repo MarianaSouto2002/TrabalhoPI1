@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "INSERT INTO candidato (nome, cpf, email, senha, data_nasc, estado, cidade) 
                 VALUES ('$nome', '$cpf', '$email', '$senha', '$data_nasc', '$estado', '$cidade')";
         $conn->query($sql);
-        header('Location: index.php');
+        header('Location: loginCandidato.php');
         exit;
     } catch (mysqli_sql_exception $e) {
         if ($e->getCode() == 1062) {
@@ -64,8 +64,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-current="page" href="index.php">Feed</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="login.php">Login</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Login
+                        </a>
+                        <ul class="dropdown-menu text-white">
+                            <li><a class="dropdown-item" href="loginEmpresa.php">Empresa</a></li>
+                            <li><a class="dropdown-item" href="loginCandidato.php">Candidato</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

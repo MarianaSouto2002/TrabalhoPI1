@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result->num_rows > 0) {
         // Login bem-sucedido, redireciona para a página do candidato
         $_SESSION['cpf'] = $cpf; // Armazena o CPF na sessão, se necessário
-        header("Location: dashboardCandidato.php"); // Redireciona para a página do candidato
+        header("Location: feedCandidato.php"); // Redireciona para a página do candidato
         exit();
     } else {
         // Login falhou, define uma mensagem de erro
