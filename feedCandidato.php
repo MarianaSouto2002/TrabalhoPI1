@@ -4,7 +4,7 @@ include 'servidor.php'; // Inclui a conexão com o banco de dados
 $mensagem = ''; // Variável para exibir mensagem de sucesso ou erro
 
 // Consulta para obter as vagas postadas pela empresa
-$sql = "SELECT p.titulo, e.nome, e.cidade, e.cnpj
+$sql = "SELECT p.titulo, e.nome, e.cidade, e.cnpj, p.id_post
         FROM post p JOIN empresa e ON p.cnpj_empresa = e.cnpj";
 $result = $conn->query($sql);
 
@@ -37,10 +37,10 @@ strap.bundle.min.js"></script>
           <li class="nav-item">
             <a class="nav-link  text-white" aria-current="page" href="feedCandidato.php">Feed</a>
           </li>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
-          <button class="btn btn-outline-light rounded-0" type="submit">Pesquisar</button>
-        </form>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
+            <button class="btn btn-outline-light rounded-0" type="submit">Pesquisar</button>
+          </form>
       </div>
     </div>
   </nav>
@@ -75,7 +75,7 @@ strap.bundle.min.js"></script>
           echo '<p class="text-center">' . $row["cidade"] . '</p>';
           echo '</div>';
           echo '<div class="card-footer text-center">';
-          echo '<a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>';
+          echo '<a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;" onclick="verVaga(\'' . $row["id_post"] . '\', \'' . $row["cnpj"] . '\')">Ver vaga</a>';
           echo '</div>';
           echo '</div>';
           echo '</div>';
@@ -88,24 +88,31 @@ strap.bundle.min.js"></script>
     </div>
 
   </div>
-    
-    <div class="card-body text-center">
-     
-    </div>
+
+  <div class="card-body text-center">
+
+  </div>
 
   </div>
 
 
   <footer class="text-center bg-dark text-white">
-  <h5 class="card-title">Quem somos nós?</h5>
-      <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
-        Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
-      </p>
+    <h5 class="card-title">Quem somos nós?</h5>
+    <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
+      Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
+    </p>
     <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto ficticio sem fins
       comerciais.</p>
   </footer>
 
 
 </body>
+<script>
+  function verVaga(id_post, cnpj) {
+    // Redireciona para a página vaga.html com os parâmetros id_post e cnpj na URL
+    window.location.href = `vaga.php?id_post=${id_post}&cnpj=${cnpj}`;
+  }
+</script>
+
 
 </html>

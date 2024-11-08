@@ -9,7 +9,6 @@ $erro = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $cpf = $_POST['cpf']; // Usando CPF
     $senha = $_POST['password'];
-
     // Consulta SQL para verificar o CPF e a senha
     $sql = "SELECT * FROM candidato WHERE cpf = ? AND senha = ?"; // Supondo que a tabela se chame 'candidatos'
     $stmt = $conn->prepare($sql);
@@ -28,6 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $erro = "CPF ou senha incorretos!";
     }
 }
+
+
+
 ?>
 
 <!DOCTYPE html>
