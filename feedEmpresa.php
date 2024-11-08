@@ -37,20 +37,21 @@ $result = $conn->query($sql);
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link  text-white" aria-current="page" href="feedEmpresa.php">Feed</a>
+            <a class="nav-link text-white" aria-current="page" href="feedEmpresa.php">Feed</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  text-white" aria-current="page" href="postarVagaEmpresa.php">Postar vaga</a>
+            <a class="nav-link text-white" aria-current="page" href="postarVagaEmpresa.php">Postar vaga</a>
           </li>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="logout.php">Sair</a>
-            </li>
-          </ul>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Sair.php">Sair</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <div class="container-fluid p-0">
     <div class="card border-0">
       <img src="SOS_EMPRESO_Banner.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
@@ -63,7 +64,7 @@ $result = $conn->query($sql);
       <?php
       if ($result->num_rows > 0) {
         // Output data of each row
-        while($row = $result->fetch_assoc()) {
+        while ($row = $result->fetch_assoc()) {
           echo '<div class="col-6 col-md-4 col-xxl-2">';
           echo '<div>';
           echo '<div class="card">';
@@ -72,7 +73,7 @@ $result = $conn->query($sql);
           echo '<p class="text-center">' . $row["cidade"] . '</p>';
           echo '</div>';
           echo '<div class="card-footer text-center">';
-          echo '<a href="#" class="btn text-white" style="background-color: #4da6ff; border-color: #4da6ff;">Ver vaga</a>';
+          echo '<a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>';
           echo '</div>';
           echo '</div>';
           echo '</div>';
@@ -87,10 +88,10 @@ $result = $conn->query($sql);
   </div>
 
   <footer class="text-center bg-dark text-white">
-  <h5 class="card-title">Quem somos nós?</h5>
-      <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
-        Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
-      </p>
+    <h5 class="card-title">Quem somos nós?</h5>
+    <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
+      Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
+    </p>
     <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto fictício sem fins comerciais.</p>
   </footer>
 </body>
