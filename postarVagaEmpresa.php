@@ -33,7 +33,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <title>Postagem empresa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <style>
+  .btn-publicar {
+    background-color: #002f6c;
+    color: white;
+  }
+</style>
 </head>
+
+
 
 <body class="bg-light">
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -64,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card p-4 shadow-sm">
-          <h2 class="card-title text-center mb-4 text-primary">Postar Vaga</h2>
+        <h2 class="card-title text-center mb-4" style="color: #002f6c;">Postar Vaga</h2>
 
           <!-- Exibe a mensagem de sucesso ou erro -->
           <?php if ($mensagem): ?>
@@ -94,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <label for="localizacao" class="form-label">Localização</label>
               <input type="text" class="form-control" id="localizacao" name="localizacao" required>
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary w-100">Publicar Vaga</button>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn w-50 btn-publicar">Publicar Vaga</button>
             </div>
           </form>
         </div>
