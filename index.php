@@ -92,7 +92,7 @@ strap.bundle.min.js"></script>
           echo '<p class="text-center">' . $row["cidade"] . '</p>';
           echo '</div>';
           echo '<div class="card-footer text-center">';
-          echo '<a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>';
+          echo '<a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;" onclick="facaLogin()">Ver vaga</a>';
           echo '</div>';
           echo '</div>';
           echo '</div>';
@@ -103,159 +103,26 @@ strap.bundle.min.js"></script>
       }
       ?>
     </div>
-
-<<<<<<< HEAD
-  </div>
-
-
-
-
-  <footer class="text-center bg-dark text-white">
-
-    <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto ficticio sem fins
-      comerciais.</p>
-=======
-    <!-- Card 2 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Designer Gráfico - Empresa ABC</p>
-            <p class="text-center">Rio de Janeiro, RJ</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Analista de Dados - Empresa DEF</p>
-            <p class="text-center">Curitiba, PR</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Engenheiro de Software - Empresa GHI</p>
-            <p class="text-center">Porto Alegre, RS</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Gerente de Projetos - Empresa JKL</p>
-            <p class="text-center">Belo Horizonte, MG</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Consultor de TI - Empresa MNO</p>
-            <p class="text-center">Recife, PE</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 7 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Marketing Digital - Empresa PQR</p>
-            <p class="text-center">Brasília, DF</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 8 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Administrador de Redes - Empresa STU</p>
-            <p class="text-center">Salvador, BA</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 9 -->
-    <div class="col-6 col-md-4 col-xxl-2">
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <p class="text-center">Analista Financeiro - Empresa VWX</p>
-            <p class="text-center">Florianópolis, SC</p>
-          </div>
-          <div class="card-footer text-center">
-          <a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>
-          </div>
-        </div>
-      </div>
-    </div>
->>>>>>> 9f66f072cfe4253e10f704128d8f245caf7a0db4
-
-    <div class="card-body text-center">
-      
-    </div>
-<<<<<<< HEAD
-=======
-
   </div>
 
 
   <footer class="text-center bg-dark text-white">
-  <h5 class="card-title">Quem somos nós?</h5>
-      <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
-        Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
-      </p>
+    <h5 class="card-title">Quem somos nós?</h5>
+    <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
+      Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
+    </p>
     <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto ficticio sem fins
       comerciais.</p>
->>>>>>> 9f66f072cfe4253e10f704128d8f245caf7a0db4
   </footer>
 
 
 </body>
+
+<script>
+  function facaLogin(){
+    alert("Faça login para ver as informações da vaga.");
+  }
+
+</script>
 
 </html>

@@ -7,7 +7,6 @@ $mensagem = ''; // Variável para exibir mensagem de sucesso ou erro
 $sql = "SELECT p.titulo, e.nome, e.cidade, e.cnpj, p.id_post
         FROM post p JOIN empresa e ON p.cnpj_empresa = e.cnpj";
 $result = $conn->query($sql);
-
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +16,8 @@ $result = $conn->query($sql);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOS EMPREGO</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/b
-ootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/boot
-strap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,12 +32,18 @@ strap.bundle.min.js"></script>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link  text-white" aria-current="page" href="feedCandidato.php">Feed</a>
+            <a class="nav-link text-white" aria-current="page" href="feedCandidato.php">Feed</a>
           </li>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
-            <button class="btn btn-outline-light rounded-0" type="submit">Pesquisar</button>
-          </form>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
+          <button class="btn btn-outline-light rounded-0" type="submit">Pesquisar</button>
+        </form>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Sair.php">Sair</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -56,7 +59,6 @@ strap.bundle.min.js"></script>
   <div class="container-fluid p-0">
     <div class="card border-0">
       <img src="SOS_EMPRESO_Banner.jpg" class="w-100" alt="Imagem da logo" style="height: 350px; object-fit: cover; object-position: 30% 30%;">
-
     </div>
   </div>
 
@@ -65,10 +67,8 @@ strap.bundle.min.js"></script>
     <div class="row mx-auto g-4">
       <?php
       if ($result->num_rows > 0) {
-        // Output data of each row
         while ($row = $result->fetch_assoc()) {
           echo '<div class="col-6 col-md-4 col-xxl-2">';
-          echo '<div>';
           echo '<div class="card">';
           echo '<div class="card-body">';
           echo '<p class="text-center">' . $row["titulo"] . ' - ' . $row["nome"] . '</p>';
@@ -79,40 +79,30 @@ strap.bundle.min.js"></script>
           echo '</div>';
           echo '</div>';
           echo '</div>';
-          echo '</div>';
         }
       } else {
         echo '<p class="text-center">Nenhuma vaga encontrada</p>';
       }
       ?>
     </div>
-
   </div>
 
-  <div class="card-body text-center">
-
-  </div>
-
-  </div>
-
-
-  <footer class="text-center bg-dark text-white">
+  <footer class="text-center bg-dark text-white mt-4">
     <h5 class="card-title">Quem somos nós?</h5>
-    <p class="card-text-end" style="font-size: 15px;">O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
+    <p class="card-text-end" style="font-size: 15px;">
+      O SOS Emprego é uma plataforma dedicada a ajudar os moradores de Monte Carmelo em sua busca por oportunidades de trabalho. Nosso site conecta candidatos a empregadores locais, facilitando o processo de recrutamento e seleção.
       Seja você um jovem em busca do primeiro emprego ou um profissional experiente à procura de novos desafios, o SOS Emprego está aqui para apoiar sua jornada profissional.
     </p>
-    <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto ficticio sem fins
-      comerciais.</p>
+    <p class="card-text pt-3">2024 <i class="bi bi-c-circle"></i> Desenvolvido por Mariana e Matheus | Projeto fictício sem fins comerciais.</p>
   </footer>
 
+  <script>
+    function verVaga(id_post, cnpj) {
+      // Redireciona para a página vaga.php com os parâmetros id_post e cnpj na URL
+      window.location.href = `vaga.php?id_post=${id_post}&cnpj=${cnpj}`;
+    }
+  </script>
 
 </body>
-<script>
-  function verVaga(id_post, cnpj) {
-    // Redireciona para a página vaga.html com os parâmetros id_post e cnpj na URL
-    window.location.href = `vaga.php?id_post=${id_post}&cnpj=${cnpj}`;
-  }
-</script>
-
 
 </html>
