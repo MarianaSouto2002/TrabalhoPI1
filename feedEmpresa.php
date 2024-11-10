@@ -5,8 +5,8 @@ include 'servidor.php'; // Inclui a conexão com o banco de dados
 $cnpj = $_SESSION['cnpj']; // Obtém o CNPJ da sessão
 $mensagem = ''; // Variável para exibir mensagem de sucesso ou erro
 
-// Consulta para obter as vagas postadas pela empresa
-$sql = "SELECT p.titulo, e.nome, e.cidade 
+// Consulta para obter as vagas postadas pela empresa, incluindo id_post
+$sql = "SELECT p.id_post, p.titulo, e.nome, e.cidade 
         FROM post p 
         JOIN empresa e ON p.cnpj_empresa = e.cnpj 
         WHERE p.cnpj_empresa = '$cnpj'";
@@ -24,6 +24,20 @@ $result = $conn->query($sql);
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Aumenta a distância entre o conteúdo e o footer */
+    footer {
+      margin-top: 50px; /* Ajuste a distância entre os posts e o footer */
+      padding-top: 20px; /* Aumenta o espaçamento interno do footer */
+      padding-bottom: 20px;
+    }
+
+    /* Aumenta o espaçamento entre os posts e o footer, especialmente para a última linha de posts */
+    .container .row:last-child {
+      margin-bottom: 50px;
+    }
+  </style>
 </head>
 
 <body>
@@ -73,7 +87,7 @@ $result = $conn->query($sql);
           echo '<p class="text-center">' . $row["cidade"] . '</p>';
           echo '</div>';
           echo '<div class="card-footer text-center">';
-          echo '<a href="#" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>';
+          echo '<a href="verVagaEmpresa.php?id_post=' . $row["id_post"] . '&cnpj=' . $cnpj . '" class="btn text-white" style="background-color: #002f6c; border-color: #002f6c;">Ver vaga</a>';
           echo '</div>';
           echo '</div>';
           echo '</div>';
