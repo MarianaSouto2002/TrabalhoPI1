@@ -22,31 +22,31 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">SOS Emprego</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" aria-current="page" href="feedCandidato.php">Feed</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2 rounded-0" type="search" placeholder="Buscar por vaga" aria-label="Search">
-          <button class="btn btn-outline-light rounded-0" type="submit">Pesquisar</button>
-        </form>
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="Sair.php">Sair</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="#">SOS Emprego</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="feedCandidato.php">Feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="vagasCandidatadas.php">Minhas inscrições</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="Sair.php">Sair</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </nav>
+</nav>
+
 
   <style>
     .carousel-control-prev,
